@@ -1,6 +1,8 @@
-<img src="images/neteclogo.png" alt="logo" width="300"/>
+<a href="https://netec.com">
+  <img src="https://static.wixstatic.com/media/96edd2_934dddb3230b4b16b1d1c56c51143738~mv2.png" alt="Logo de Netec" width="300"/>
+</a>
 
-# Talleres Aplicados de Productividad Digital con Microsoft 365 - Misiones colaborativas
+# Talleres Aplicados de Productividad Digital con Microsoft 365 
 
 ## Plataforma de laboratorios
 
@@ -51,49 +53,6 @@ Cada uno de estos laboratorios está diseñado para ofrecerte una experiencia pr
   - **Descripción**: mapeo de una tarea repetitiva y adaptación de un flujo base de Power Automate con seguimiento automático, condición y casos de prueba.
   - ⏱️ **Duración estimada**: 160 min (2 h 40 min) · 100 puntos.
 
-### Distribución del tiempo
-
-| Misión | Actividades | Revisión grupal | Total |
-|---|---|---|---|
-| 1. Operación coordinada | 30 + 40 + 45 + 25 = 140 min | 20 min | 160 min |
-| 2. Expediente confiable | 40 + 40 + 35 + 25 = 140 min | 20 min | 160 min |
-| 3. Menos pasos, más resultados | 30 + 65 + 30 + 15 = 140 min | 20 min | 160 min |
-| **Total** | **420 min** | **60 min** | **480 min (8 h, 100% práctica)** |
-
-## Instrucciones generales del laboratorio
-
-1. Antes del taller, el instructor prepara los equipos de Teams, los archivos y el flujo base con la [Guía de configuración](Setup_Guide.md).
-2. Cada misión está en su carpeta `CapituloNN` con su `README.md` y la carpeta `recursos`. Para descargar un archivo, abrirlo y seleccionar **Download raw file**.
-3. Cada equipo trabaja en su equipo de Teams `Cierre Octubre - Equipo [N]` y guarda los entregables en **Archivos** del canal `Cierre octubre`, con el número de equipo en el nombre (`[EQUIPO]`).
-4. Las misiones son progresivas: el canal y el plan de la Misión 1 y la biblioteca y el formulario de la Misión 2 se reutilizan después.
-5. Registrar los roles de cada actividad en la hoja `Roles` de la rúbrica de la misión.
-6. Usar Copilot Chat básico solo con la cuenta institucional y solo con la información del caso; verificar siempre su respuesta.
-7. Todos los datos son ficticios. No cargar información real de la organización.
-
-## Estructura del repositorio
-
-```text
-.
-├── README.md            Página principal (este archivo)
-├── Setup_Guide.md       Guía de configuración del entorno
-├── images/              Logotipo y diagramas de las misiones
-├── Capitulo01/          Misión 1: README.md y recursos/
-├── Capitulo02/          Misión 2: README.md y recursos/
-└── Capitulo03/          Misión 3: README.md y recursos/
-```
-
-## Recursos adicionales
-
-- [Microsoft 365 Copilot Chat](https://learn.microsoft.com/es-es/copilot/overview)
-- [Equipos y canales en Microsoft Teams](https://learn.microsoft.com/es-es/microsoftteams/teams-channels-overview)
-- [Ayuda de Microsoft Planner](https://support.microsoft.com/es-es/planner)
-
-## Enlaces de referencia
-
-- [Crear un formulario con Microsoft Forms](https://support.microsoft.com/es-es/office/crear-un-formulario-con-microsoft-forms-4ffb64cc-7d5d-402f-b82e-b1d49418fd9d)
-- [Control de versiones en SharePoint](https://support.microsoft.com/es-es/office/habilitar-y-configurar-el-control-de-versiones-de-una-lista-o-biblioteca-1555d642-23ee-446a-990a-bcab618c7a37)
-- [Power Automate con Microsoft Forms](https://learn.microsoft.com/es-es/power-automate/forms/overview)
-- [Conectores estándar de Power Platform](https://learn.microsoft.com/es-es/connectors/connector-reference/connector-reference-standard-connectors)
 
 ---
 
