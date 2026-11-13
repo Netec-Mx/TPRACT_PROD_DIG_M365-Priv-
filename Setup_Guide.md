@@ -99,13 +99,14 @@ Los accesos se entregan por el canal institucional del cliente. No registrar con
 ### Lista `Registro de solicitudes` (instructor, una por equipo)
 
 1. En cada equipo, **...** > **Abrir en SharePoint** > **Nuevo** > **Lista** > **Lista en blanco** `Registro de solicitudes`.
-2. Crear las columnas según [Especificacion_Flujo_Base.docx](Capitulo03/recursos/Especificacion_Flujo_Base.docx): `Title` renombrada a `Beneficiario`, `Tipo` (Elección), `Factura` (Texto), `Monto_MXN` (Número), `Fecha_requerida` (Fecha), `Area` (Elección) y `Estado` (Elección: Recibida, En revisión, Pagada; valor predeterminado Recibida).
+2. Crear las columnas según [Especificacion_Flujo_Base.docx](Capitulo03/recursos/Especificacion_Flujo_Base.docx): `Title` renombrada a `Beneficiario`, `Tipo` (Elección: Pago a proveedor, Reembolso de gastos, Viáticos, Anticipo), `Factura` (Texto), `Monto_MXN` (Número, 2 decimales), `Fecha_requerida` (Fecha), `Area` (Elección: Tesorería, Contabilidad, Planeación, Compras, Coordinación) y `Estado` (Elección: Recibida, En revisión, Pagada; valor predeterminado Recibida).
+3. Las opciones de `Tipo` y `Area` deben escribirse igual que en el formulario de la Misión 2; si difieren, **Crear elemento** falla.
 
 **Resultado esperado:** la lista existe en el sitio de cada equipo con 7 columnas.
 
 ### Formulario y flujo base (instructor)
 
-1. En [forms.office.com](https://forms.office.com/), crear el formulario `Solicitudes del cierre` con las preguntas obligatorias Tipo, Beneficiario, Factura, Monto_MXN (Texto con restricción **Número**), Fecha_requerida y Area.
+1. En [forms.office.com](https://forms.office.com/), crear el formulario `Solicitudes del cierre` con las mismas preguntas obligatorias que los equipos crean en la Misión 2: `Tipo`, `Beneficiario`, `Factura`, `Monto MXN` (Texto con restricción **Número**), `Fecha requerida` y `Área`.
 2. En [make.powerautomate.com](https://make.powerautomate.com/), **+ Crear > Flujo de nube automatizado** con el nombre `Registro de solicitudes del cierre` y el desencadenador **Cuando se envía una respuesta nueva** (Microsoft Forms) sobre ese formulario.
 3. Agregar **Obtener los detalles de la respuesta** (Id. de respuesta: contenido dinámico **Id. de respuesta**).
 4. Agregar **Crear elemento** (SharePoint) sobre la lista `Registro de solicitudes` de un equipo y asignar cada columna con el contenido dinámico de la respuesta.
@@ -114,7 +115,7 @@ Los accesos se entregan por el canal institucional del cliente. No registrar con
 
 **Resultado esperado:** el flujo base se ejecuta correctamente y aparece en **Mis flujos > Compartido conmigo** para todos los participantes. En la Misión 3 cada equipo guarda una copia y la apunta a su formulario y a su lista.
 
-> **Monto como texto:** Forms entrega todas las respuestas como texto. Para la condición de la Misión 3, la expresión es `float(outputs('Obtener_los_detalles_de_la_respuesta')?['body/<Id_de_la_pregunta_Monto>'])`. Antes del taller, identificar el Id. de la pregunta en la salida de una ejecución de prueba para poder indicarlo a los equipos.
+> **Monto como texto:** Forms entrega todas las respuestas como texto. En la Misión 3 los equipos provocan y corrigen ese error con la expresión `float()` aplicada al contenido dinámico **Monto MXN** (Tarea 3, pasos 4 y 5). Antes del taller, el instructor debe hacer ese ejercicio en su copia para conocer el mensaje de error que verá su tenant.
 
 ### Copilot Chat
 
@@ -166,7 +167,7 @@ Teams: Cierre Octubre - Equipo [N]
 |---|---|
 | 1 | Equipos de Teams creados con sus integrantes; Planner y Copilot Chat disponibles |
 | 2 | Sitio de SharePoint de cada equipo accesible; Forms disponible |
-| 3 | Lista `Registro de solicitudes` en cada sitio; flujo base compartido; Id. de la pregunta Monto identificado |
+| 3 | Lista `Registro de solicitudes` en cada sitio; flujo base compartido; ejercicio de `float()` probado por el instructor |
 
 ## Correcciones de coherencia
 
@@ -229,7 +230,7 @@ No aplica. El taller se valida en las interfaces web de Microsoft 365 con los pr
 - [ ] Equipos de Teams creados con los integrantes como propietarios.
 - [ ] Lista `Registro de solicitudes` en el sitio de cada equipo.
 - [ ] Formulario base y flujo base probados y compartidos.
-- [ ] Id. de la pregunta Monto identificado para la expresión `float`.
+- [ ] Condición con `float()` probada por el instructor en su copia del flujo.
 - [ ] Copilot Chat con protección de datos empresariales.
 - [ ] Validaciones V-01 a V-07 aprobadas.
 
