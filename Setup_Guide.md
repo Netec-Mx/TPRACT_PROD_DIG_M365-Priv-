@@ -8,10 +8,10 @@
 |---|---|
 | Clave del curso | TPRACT_PROD_DIG_M365 (Priv) |
 | Versión del documento | 1.0 |
-| Estado | BORRADOR: revisión documental completa; pendiente de validación en el tenant del cliente |
-| Instructor responsable | Por asignar por Netec |
+| Estado | REVISADO: contenido actualizado documentalmente; pendiente de validación en el tenant del cliente |
+| Responsable del setup | Equipo Soporte de Netec |
 | Fecha de elaboración | 2026-11-13 |
-| Fecha de última validación | 2026-11-13 (revisión de enlaces y documentación) |
+| Fecha de última revisión documental | 2026-11-23 |
 | Repositorio de laboratorios | Repositorio de GitHub de Netec del taller (rama `main`) |
 | Rama y revisión analizada | `main`, versión 1.0 |
 | Alcance revisado | 3 misiones, 14 archivos de recursos, README principal y Setup Guide |
@@ -37,8 +37,8 @@ Dejar preparado, antes del taller, un espacio de trabajo por equipo en Microsoft
 
 | Sistema operativo | Edición y versión | Arquitectura | Condición de soporte o validación |
 |---|---|---|---|
-| Windows | 10 u 11 | x64 | Plataforma base; compatible según fabricante; pendiente de validar en el tenant del cliente |
-| macOS | 13 o posterior | Apple silicon o Intel | Compatible según fabricante; no validado |
+| Windows | 10 u 11 | x64 | Puede usar aplicaciones web o escritorio; validar las políticas del tenant |
+| macOS | Versión compatible con un navegador admitido | Apple silicon o Intel | Las prácticas usan principalmente aplicaciones web; validar las políticas del tenant |
 
 # Software Requerido
 
@@ -51,7 +51,7 @@ Dejar preparado, antes del taller, un espacio de trabajo por equipo en Microsoft
 | Microsoft Forms | Servicio administrado | N/A | Obligatorio (misiones 2 y 3) | [forms.office.com](https://forms.office.com/) |
 | Excel y Word | Microsoft 365 (escritorio o web) | x64 | Obligatorio | [m365.cloud.microsoft](https://m365.cloud.microsoft/) |
 | Power Automate | Servicio administrado, conectores estándar incluidos en Microsoft 365 | N/A | Obligatorio (Misión 3) | [make.powerautomate.com](https://make.powerautomate.com/) |
-| Microsoft 365 Copilot Chat (Copilot Chat básico) | Servicio administrado con protección de datos empresariales | N/A | Obligatorio (Misión 1) | [m365.cloud.microsoft/chat](https://m365.cloud.microsoft/chat) |
+| Microsoft 365 Copilot Chat | Experiencia disponible según la licencia y las políticas del tenant | N/A | Solo si el tenant habilita Copilot Chat (Misión 1) | [m365.cloud.microsoft/chat](https://m365.cloud.microsoft/chat) |
 | Power BI | Solo como referencia de uso posterior de los datos | N/A | Opcional | No se usa en las misiones |
 
 Las capacidades disponibles dependen de las licencias y políticas del tenant. Registrar en el [Registro de validación](#registro-validacion) la fecha, la edición visible y cualquier restricción.
@@ -71,10 +71,10 @@ Las capacidades disponibles dependen de las licencias y políticas del tenant. R
 | Recurso o servicio | Licencia o suscripción | Cuenta o rol requerido | Permiso mínimo | Responsable de habilitación |
 |---|---|---|---|---|
 | Microsoft 365 | Licencia del cliente con Teams, SharePoint, Forms y Planner | Cuenta institucional | Usuario | TI del cliente |
-| Equipo de Teams por equipo de trabajo | Incluida (grupo de Microsoft 365) | Instructor o TI | Crear equipos; los 3 integrantes como **propietarios** | Instructor o TI del cliente |
+| Equipo de Teams por equipo de trabajo | Incluida (grupo de Microsoft 365) | Equipo Soporte | Crear equipos; los 3 integrantes como **propietarios** | Equipo Soporte, con apoyo de TI del cliente si es necesario |
 | SharePoint del equipo | Incluida | Propietario del equipo | Crear bibliotecas, listas y columnas | Automático al crear el equipo |
 | Power Automate | Incluido en Microsoft 365 (conectores estándar) | Cuenta institucional | Crear flujos de nube y ser copropietario | TI del cliente |
-| Copilot Chat básico | Incluido para cuentas con Entra ID | Cuenta institucional | Usuario | TI del cliente |
+| Microsoft 365 Copilot Chat | Depende de la licencia y de las políticas del tenant | Cuenta institucional | Usuario con acceso habilitado | TI del cliente |
 
 Los accesos se entregan por el canal institucional del cliente. No registrar contraseñas ni códigos de verificación en el repositorio ni en los entregables.
 
@@ -82,13 +82,13 @@ Los accesos se entregan por el canal institucional del cliente. No registrar con
 
 ## 1. Obtener los materiales
 
-- Repositorio autorizado: repositorio de GitHub del taller (botón **Code > Download ZIP**) o paquete ZIP del instructor.
+- Repositorio autorizado: repositorio de GitHub del taller (botón **Code > Download ZIP**) o paquete ZIP entregado por el Equipo Soporte.
 - Revisión: rama `main`.
 - Directorio de trabajo: **Archivos** del canal de cada equipo de Teams.
 
 ## 2. Instalar o habilitar los componentes
 
-### Equipos de trabajo en Teams (instructor, antes del taller)
+### Equipos de trabajo en Teams (Equipo Soporte, antes del taller)
 
 1. Formar los equipos de 3 integrantes (si el grupo no es múltiplo de 3, formar equipos de 2 o 4; en equipos de 2, una persona combina Ejecución y Verificación).
 2. En Teams, **Equipos > + > Crear equipo** > **Desde cero** > **Privado**, con el nombre `Cierre Octubre - Equipo [N]`.
@@ -96,7 +96,7 @@ Los accesos se entregan por el canal institucional del cliente. No registrar con
 
 **Resultado esperado:** cada equipo tiene su espacio de Teams y su sitio de SharePoint, y todos sus integrantes son propietarios.
 
-### Lista `Registro de solicitudes` (instructor, una por equipo)
+### Lista `Registro de solicitudes` (Equipo Soporte, una por equipo)
 
 1. En cada equipo, **...** > **Abrir en SharePoint** > **Nuevo** > **Lista** > **Lista en blanco** `Registro de solicitudes`.
 2. Crear las columnas según [Especificacion_Flujo_Base.docx](Capitulo03/recursos/Especificacion_Flujo_Base.docx): `Title` renombrada a `Beneficiario`, `Tipo` (Elección: Pago a proveedor, Reembolso de gastos, Viáticos, Anticipo), `Factura` (Texto), `Monto_MXN` (Número, 2 decimales), `Fecha_requerida` (Fecha), `Area` (Elección: Tesorería, Contabilidad, Planeación, Compras, Coordinación) y `Estado` (Elección: Recibida, En revisión, Pagada; valor predeterminado Recibida).
@@ -104,7 +104,7 @@ Los accesos se entregan por el canal institucional del cliente. No registrar con
 
 **Resultado esperado:** la lista existe en el sitio de cada equipo con 7 columnas.
 
-### Formulario y flujo base (instructor)
+### Formulario y flujo base (Equipo Soporte)
 
 1. En [forms.office.com](https://forms.office.com/), crear el formulario `Solicitudes del cierre` con las mismas preguntas obligatorias que los equipos crean en la Misión 2: `Tipo`, `Beneficiario`, `Factura`, `Monto MXN` (Texto con restricción **Número**), `Fecha requerida` y `Área`.
 2. En [make.powerautomate.com](https://make.powerautomate.com/), **+ Crear > Flujo de nube automatizado** con el nombre `Registro de solicitudes del cierre` y el desencadenador **Cuando se envía una respuesta nueva** (Microsoft Forms) sobre ese formulario.
@@ -115,7 +115,7 @@ Los accesos se entregan por el canal institucional del cliente. No registrar con
 
 **Resultado esperado:** el flujo base se ejecuta correctamente y aparece en **Mis flujos > Compartido conmigo** para todos los participantes. En la Misión 3 cada equipo guarda una copia y la apunta a su formulario y a su lista.
 
-> **Monto como texto:** Forms entrega todas las respuestas como texto. En la Misión 3 los equipos provocan y corrigen ese error con la expresión `float()` aplicada al contenido dinámico **Monto MXN** (Tarea 3, pasos 4 y 5). Antes del taller, el instructor debe hacer ese ejercicio en su copia para conocer el mensaje de error que verá su tenant.
+> **Monto como texto:** Forms entrega todas las respuestas como texto. En la Misión 3 los equipos provocan y corrigen ese error con la expresión `float()` aplicada al contenido dinámico **Monto MXN** (Tarea 3, pasos 4 y 5). Antes del taller, el Equipo Soporte debe hacer ese ejercicio en su copia para conocer el mensaje de error que verá su tenant.
 
 ### Copilot Chat
 
@@ -125,7 +125,7 @@ Los accesos se entregan por el canal institucional del cliente. No registrar con
 
 ## 3. Preparar archivos de configuración
 
-No se requieren archivos de configuración. El instructor puede cargar previamente los archivos de `recursos/` en **Archivos** del canal **General** de cada equipo para ahorrar tiempo de descarga.
+No se requieren archivos de configuración. El Equipo Soporte puede cargar previamente los archivos de `recursos/` en **Archivos** del canal **General** de cada equipo para ahorrar tiempo de descarga.
 
 # Variables de Entorno
 
@@ -137,12 +137,12 @@ No se requieren variables de entorno.
 
 | Parámetro | Valor o convención | Observaciones |
 |---|---|---|
-| Equipo de Teams | `Cierre Octubre - Equipo [N]` (privado) | Uno por equipo; creado por el instructor |
+| Equipo de Teams | `Cierre Octubre - Equipo [N]` (privado) | Uno por equipo; creado por el Equipo Soporte |
 | Canal de trabajo | `Cierre octubre` | Lo crea el equipo en la Misión 1 |
 | Plan de Planner | `Tablero de rescate` | Misión 1 |
 | Biblioteca | `Expediente Cierre` | Misión 2, en el sitio del equipo |
 | Formulario del equipo | `Solicitudes del cierre - Equipo [N]` | Misión 2; se usa en la Misión 3 |
-| Lista | `Registro de solicitudes` | Preparada por el instructor; Misión 3 |
+| Lista | `Registro de solicitudes` | Preparada por el Equipo Soporte; Misión 3 |
 | Flujo | `Registro de solicitudes del cierre - Equipo [N]` | Copia del flujo base; Misión 3 |
 | Nombres de entregables | `Nombre_[EQUIPO].ext` | Sin espacios ni acentos |
 
@@ -158,8 +158,8 @@ Teams: Cierre Octubre - Equipo [N]
 
 | Recurso | Nombre o identificador | Estructura o configuración base | Responsable de creación |
 |---|---|---|---|
-| Formulario base | `Solicitudes del cierre` | 6 preguntas obligatorias | Instructor |
-| Flujo base | `Registro de solicitudes del cierre` | Forms > Obtener detalles > Crear elemento | Instructor |
+| Formulario base | `Solicitudes del cierre` | 6 preguntas obligatorias | Equipo Soporte |
+| Flujo base | `Registro de solicitudes del cierre` | Forms > Obtener detalles > Crear elemento | Equipo Soporte |
 
 ## Preparación antes de cada práctica
 
@@ -167,14 +167,14 @@ Teams: Cierre Octubre - Equipo [N]
 |---|---|
 | 1 | Equipos de Teams creados con sus integrantes; Planner y Copilot Chat disponibles |
 | 2 | Sitio de SharePoint de cada equipo accesible; Forms disponible |
-| 3 | Lista `Registro de solicitudes` en cada sitio; flujo base compartido; ejercicio de `float()` probado por el instructor |
+| 3 | Lista `Registro de solicitudes` en cada sitio; flujo base compartido; ejercicio de `float()` probado por el Equipo Soporte |
 
 ## Correcciones de coherencia
 
 | Inconsistencia o dependencia omitida | Configuración unificada | Ajuste necesario en las copias de trabajo |
 |---|---|---|
-| El temario indica que el instructor prepara los espacios y el flujo base | Esta guía define el equipo, la lista, el formulario y el flujo base por preparar | Ninguno |
-| La creación de equipos puede estar restringida en el tenant | El instructor o TI crea los equipos antes del taller | Confirmar con TI del cliente |
+| El temario indica que el Equipo Soporte prepara los espacios y el flujo base | Esta guía define el equipo, la lista, el formulario y el flujo base por preparar | Ninguno |
+| La creación de equipos puede estar restringida en el tenant | El Equipo Soporte crea los equipos antes del taller | Confirmar con TI del cliente si es necesario |
 | El temario menciona Power BI como uso posterior | La Misión 2 deja los datos en una tabla lista para Power BI; Power BI no se usa | Ninguno |
 
 # Servicios Externos Requeridos
@@ -221,7 +221,7 @@ No aplica. El taller se valida en las interfaces web de Microsoft 365 con los pr
 |---|---|---|---|---|
 | Un integrante no ve el equipo | No fue agregado o la sincronización tarda | Miembros del equipo | Agregarlo como propietario y esperar unos minutos | V-02 |
 | El flujo no aparece en Compartido conmigo | No es copropietario | Propietarios del flujo | Agregar al integrante o al grupo del equipo | V-06 |
-| La copia del flujo pide reparar conexiones | Las conexiones son del instructor | Mensaje del diseñador | Cada equipo agrega sus propias conexiones | V-06 |
+| La copia del flujo pide reparar conexiones | Las conexiones originales pertenecen al Equipo Soporte | Mensaje del diseñador | Cada equipo agrega sus propias conexiones | V-06 |
 | Power Automate marca un conector como Premium o bloqueado | Licencia o directiva de datos | Mensaje del diseñador | Usar solo Forms, SharePoint, Outlook y Teams; solicitar a TI ajustar la directiva | V-06 |
 | Copilot Chat aparece sin protección de datos empresariales | Sesión con cuenta personal | Cuenta en la esquina superior | Iniciar sesión con la cuenta institucional | V-07 |
 
@@ -230,13 +230,13 @@ No aplica. El taller se valida en las interfaces web de Microsoft 365 con los pr
 - [ ] Equipos de Teams creados con los integrantes como propietarios.
 - [ ] Lista `Registro de solicitudes` en el sitio de cada equipo.
 - [ ] Formulario base y flujo base probados y compartidos.
-- [ ] Condición con `float()` probada por el instructor en su copia del flujo.
+- [ ] Condición con `float()` probada por el Equipo Soporte en su copia del flujo.
 - [ ] Copilot Chat con protección de datos empresariales.
 - [ ] Validaciones V-01 a V-07 aprobadas.
 
 # Resumen
 
-Antes del taller, el instructor crea un equipo de Teams por equipo de trabajo, la lista `Registro de solicitudes` en cada sitio y un flujo base compartido. Los participantes solo necesitan una cuenta institucional de Microsoft 365 con Teams, Planner, SharePoint, Forms, Excel, Power Automate con conectores estándar y Copilot Chat básico. No se instala software adicional.
+Antes del taller, el Equipo Soporte crea un equipo de Teams por equipo de trabajo, la lista `Registro de solicitudes` en cada sitio y un flujo base compartido. Los participantes necesitan una cuenta institucional de Microsoft 365 con acceso a Teams, Planner, SharePoint, Forms, Excel y Power Automate con conectores estándar. Copilot Chat solo es necesario si el tenant habilita esta experiencia. No se instala software adicional.
 
 <a id="registro-validacion"></a>
 
@@ -244,17 +244,18 @@ Antes del taller, el instructor crea un equipo de Teams por equipo de trabajo, l
 
 | Fecha | Responsable | Plataforma o entorno probado | Resultado | Limitaciones o acciones pendientes |
 |---|---|---|---|---|
-| 2026-11-13 | Desarrollo de contenido Netec | Revisión documental, enlaces y coherencia con el temario | APTO para publicación del repositorio | No se validó en el tenant del cliente. Pendiente: V-01 a V-07 con una cuenta de participante |
+| 2026-11-23 | Desarrollo de contenido Netec | Revisión documental, enlaces y coherencia con el temario | APTO para publicación del repositorio, sujeto a validación | No se validó en el tenant del cliente. Pendiente: V-01 a V-07 con una cuenta de participante |
 
 ## Referencias oficiales
 
 | Documento o recurso | URL | Fecha de consulta |
 |---|---|---|
-| Microsoft 365 Copilot Chat | https://learn.microsoft.com/es-es/copilot/overview | 2026-11-13 |
-| Equipos y canales de Teams | https://learn.microsoft.com/es-es/microsoftteams/teams-channels-overview | 2026-11-13 |
-| Ayuda de Planner | https://support.microsoft.com/es-es/planner | 2026-11-13 |
-| Control de versiones en SharePoint | https://support.microsoft.com/es-es/office/habilitar-y-configurar-el-control-de-versiones-de-una-lista-o-biblioteca-1555d642-23ee-446a-990a-bcab618c7a37 | 2026-11-13 |
-| Power Automate con Forms | https://learn.microsoft.com/es-es/power-automate/forms/overview | 2026-11-13 |
-| Conectores estándar | https://learn.microsoft.com/es-es/connectors/connector-reference/connector-reference-standard-connectors | 2026-11-13 |
+| Microsoft 365 Copilot Chat | https://learn.microsoft.com/es-es/copilot/overview | 2026-11-23 |
+| Equipos y canales de Teams | https://learn.microsoft.com/es-es/microsoftteams/teams-channels-overview | 2026-11-23 |
+| Ayuda de Planner | https://support.microsoft.com/es-es/planner | 2026-11-23 |
+| Control de versiones en SharePoint | https://support.microsoft.com/es-es/office/habilitar-y-configurar-el-control-de-versiones-de-una-lista-o-biblioteca-1555d642-23ee-446a-990a-bcab618c7a37 | 2026-11-23 |
+| Microsoft Forms | https://support.microsoft.com/es-es/office/crear-un-formulario-con-microsoft-forms-4ffb64cc-7d5d-402f-b82e-b1d49418fd9d | 2026-11-23 |
+| Power Automate con Forms | https://learn.microsoft.com/es-es/power-automate/forms/overview | 2026-11-23 |
+| Conectores estándar | https://learn.microsoft.com/es-es/connectors/connector-reference/connector-reference-standard-connectors | 2026-11-23 |
 
 [Inicio](README.md)
