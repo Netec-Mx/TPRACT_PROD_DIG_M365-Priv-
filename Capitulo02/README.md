@@ -21,6 +21,8 @@ Al finalizar la misión, el equipo será capaz de:
 
 ## Antes de empezar
 
+**Comprobación rápida:** necesita el equipo y canal creados en la Misión 1, acceso al sitio de SharePoint y a Microsoft Forms. Use un navegador actualizado y una cuenta institucional.
+
 | Elemento | Valor |
 |---|---|
 | Espacio del equipo | Equipo de Teams `Cierre Octubre - Equipo [N]`, su canal `Cierre octubre` (Misión 1) y su sitio de SharePoint |
@@ -136,7 +138,7 @@ Seleccionar **Salir de la vista de cuadrícula**.
 
 **Paso 5.** Volver a **Todos los documentos**. Seleccionar el encabezado **Tipo_documento** > **Agrupar por Tipo_documento** y guardar la vista como `Por tipo`.
 
-**Paso 6.** Comprobar que el historial de versiones está activado: engranaje ⚙️ > **Configuración de la biblioteca** > **Más configuración de la biblioteca** > **Configuración de versiones**.
+**Paso 6.** Comprobar que el historial de versiones está activado: engranaje ⚙️ > **Configuración de la biblioteca** > **Más configuración de la biblioteca** > **Configuración de versiones**. Este procedimiento sigue la configuración moderna actual de SharePoint Online.
 
 - **Qué verás:** **Crear versiones principales** activado. No cambiar nada y seleccionar **Cancelar**.
 - **Si no ocurre así:** si está desactivado, activarlo y seleccionar **Aceptar**.
