@@ -22,9 +22,18 @@ Personal operativo con formación previa o conocimientos equivalentes de product
 
 ## Prerrequisitos
 
-- Haber cursado la formación virtual *Productividad Digital con Microsoft 365* o demostrar conocimientos equivalentes.
-- Contar con acceso autorizado a Microsoft 365 (Teams, SharePoint, Forms, Planner, Excel, Power Automate con conectores estándar y Copilot Chat básico).
-- El instructor prepara con antelación los datos, archivos, espacios de práctica y el flujo base, según la [Guía de configuración](Setup_Guide.md).
+- Haber cursado la formación virtual *Productividad Digital con Microsoft 365* o tener conocimientos equivalentes.
+- Tener una cuenta institucional autorizada de Microsoft 365 y acceso al navegador.
+- Confirmar con el instructor que están disponibles Teams, SharePoint, Forms, Planner, Excel, Power Automate con conectores estándar y Copilot Chat.
+- Usar los equipos, archivos y flujo preparados antes del taller por el instructor. Las tres misiones dependen de esta preparación; consulte la [Guía de configuración](Setup_Guide.md).
+
+## Antes de comenzar
+
+1. Acceda con su cuenta institucional, no con una cuenta personal.
+2. Abra el equipo `Cierre Octubre - Equipo [N]` indicado por el instructor.
+3. Confirme que puede abrir Teams, Planner, SharePoint y Forms.
+4. Para la Misión 3, confirme que también puede abrir el sitio del equipo y Power Automate.
+5. Si falta un recurso, deténgase y avise al instructor. No use cuentas personales ni instale software sin autorización.
 
 ## El caso y la dinámica
 
@@ -40,7 +49,7 @@ Cada uno de estos laboratorios está diseñado para ofrecerte una experiencia pr
 
 ### [Práctica 1. Misión 1. Operación coordinada: rescatar una jornada de trabajo](Capitulo01/README.md)
 
-  - **Descripción**: diagnóstico de una jornada operativa, tablero de rescate en Planner, canal de coordinación en Teams y mensaje de acción elaborado con Copilot Chat básico.
+  - **Descripción**: diagnóstico de una jornada operativa, tablero de rescate en Planner, canal de coordinación en Teams y mensaje de acción elaborado con Copilot Chat si está disponible.
   - ⏱️ **Duración estimada**: 160 min (2 h 40 min) · 100 puntos.
 
 ### [Práctica 2. Misión 2. Expediente confiable: información sin pérdidas](Capitulo02/README.md)
