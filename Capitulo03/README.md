@@ -21,6 +21,8 @@ Al finalizar la misión, el equipo será capaz de:
 
 ## Antes de empezar
 
+**Comprobación rápida:** necesita el formulario creado en la Misión 2, la lista `Registro de solicitudes`, el flujo base compartido y permiso para crear flujos con conectores estándar. El instructor debe aprobar estas condiciones antes de comenzar.
+
 | Elemento | Valor |
 |---|---|
 | Dónde trabajar | [make.powerautomate.com](https://make.powerautomate.com/), el formulario de la Misión 2 y el sitio de SharePoint del equipo |
@@ -289,6 +291,11 @@ Dejar la rama **Falso** sin acciones: el aviso del canal ya se envió antes de l
 - *Síntoma:* el historial de ejecuciones está vacío.
 - *Causa:* la copia está desactivada o el desencadenador apunta al formulario del instructor.
 - *Solución:* seleccionar **Activar** en la página del flujo y revisar el **Id. del formulario** del desencadenador.
+
+**No hay permiso para crear flujos**
+- *Síntoma:* Power Automate no permite crear, guardar o activar el flujo.
+- *Causa:* la licencia o las políticas DLP del tenant bloquean un conector o la creación de flujos.
+- *Solución:* avise al instructor y a TI. No agregue conectores premium ni cambie cuentas personales.
 
 **Crear elemento falla con un error de columna**
 - *Síntoma:* ✖ en **Crear elemento** con un mensaje sobre `Monto_MXN` o una columna de elección.
