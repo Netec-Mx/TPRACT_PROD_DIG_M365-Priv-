@@ -1,6 +1,6 @@
 # Práctica 1. Misión 1. Operación coordinada: rescatar una jornada de trabajo
 
-**Misión 1 de 3 · Herramientas: Planner, Teams y Copilot Chat básico · Puntuación: 100 puntos por equipo**
+**Misión 1 de 3 · Herramientas: Planner, Teams y Copilot Chat (si está habilitado) · Puntuación: 100 puntos por equipo**
 
 ⏱️ **Duración:** 2 h 40 min (160 min) · 👥 **Modalidad:** equipos de 3 · 📄 **Entregable:** `Bitacora_Mision1_[EQUIPO].docx`, plan `Tablero de rescate` y canal `Cierre octubre`
 
@@ -15,11 +15,13 @@ Al finalizar la misión, el equipo será capaz de:
 - Detectar interrupciones, duplicidades y tareas repetitivas en una jornada operativa y acordar tres mejoras prioritarias.
 - Organizar las actividades del cierre en Planner con responsables, fechas, prioridades, criterios de avance y dependencias coherentes.
 - Configurar en Teams un canal de coordinación con archivo principal, pestañas, acuerdos y actualizaciones de estado.
-- Producir con Copilot Chat básico un mensaje operativo y una lista de pendientes, y verificar sus datos antes de publicarlos.
+- Producir con Copilot Chat un mensaje operativo y una lista de pendientes, si el tenant lo habilita, y verificar sus datos antes de publicarlos.
 
 <img src="../images/p01-objetivo.svg" alt="Flujo de la Misión 1: diagnóstico, tablero de rescate, canal de coordinación, mensaje de acción y revisión grupal" width="720"/>
 
 ## Antes de empezar
+
+**Comprobación rápida:** necesita un equipo de Teams creado por el instructor, los cinco archivos de esta misión y acceso a Planner y Copilot Chat. Si falta alguno, confirme la preparación con el instructor antes de trabajar.
 
 | Elemento | Valor |
 |---|---|
@@ -55,7 +57,7 @@ Al finalizar la misión, el equipo será capaz de:
 - **Qué verás:** las pestañas **Publicaciones** y **Archivos** en la parte superior del canal.
 - **Si no ocurre así:** si el equipo no aparece, avisar al instructor para que lo agregue como propietario.
 
-**Paso 2.** La persona en **Ejecución** descarga los 5 archivos de la tabla *Antes de empezar* (abrir cada enlace y seleccionar **Download raw file**). En el canal **General**, seleccionar la pestaña **Archivos** > **Cargar** > **Archivos** y seleccionar los 5 archivos.
+**Paso 2.** La persona en **Ejecución** descarga los 5 archivos de la tabla *Antes de empezar*. En GitHub, abra el enlace de cada archivo y use **Download raw file** si aparece; desde un paquete ZIP, extraiga primero los recursos. En el canal **General**, seleccionar la pestaña **Archivos** > **Cargar** > **Archivos** y seleccionar los 5 archivos.
 
 - **Qué verás:** los 5 archivos listados en **Archivos**, visibles para todo el equipo.
 - **Alternativa:** si el instructor ya cargó los archivos, omitir este paso.
@@ -235,7 +237,7 @@ Corregir lo que falle y escribir en la bitácora, sección **Actividad 3**, qué
 
 **Paso 1.** Rotar los roles y registrarlos en la hoja `Roles` (Actividad 4).
 
-**Paso 2.** La persona en **Ejecución** abre una pestaña del navegador en [m365.cloud.microsoft/chat](https://m365.cloud.microsoft/chat) e inicia sesión con su cuenta institucional.
+**Paso 2.** La persona en **Ejecución** abre una pestaña del navegador en [m365.cloud.microsoft/chat](https://m365.cloud.microsoft/chat) e inicia sesión con su cuenta institucional. La disponibilidad y las funciones de Copilot dependen de la licencia y de las políticas del tenant del cliente.
 
 - **Qué verás:** el cuadro de mensaje de **Microsoft 365 Copilot Chat** y un escudo que indica la protección de datos empresariales.
 - **Si no ocurre así:** si no aparece el escudo, la sesión es con una cuenta personal; cerrarla e iniciar con la institucional.
@@ -354,6 +356,11 @@ Marca como "Por definir" cualquier responsable o fecha que no esté en las notas
 - *Síntoma:* responde que no puede abrir el documento.
 - *Causa:* carga de archivos restringida en el tenant.
 - *Solución:* usar la alternativa del paso 3 de la Tarea 4: pegar el texto de las notas.
+
+**Copilot Chat no está disponible**
+- *Síntoma:* la dirección no abre Copilot o la cuenta no muestra chat protegido.
+- *Causa:* la licencia o la política del tenant no habilita esta experiencia.
+- *Solución:* pedir al instructor que confirme el acceso. Complete las demás tareas y no publique información inventada por otra herramienta.
 
 ## Limpieza
 
